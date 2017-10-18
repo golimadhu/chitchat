@@ -12,7 +12,13 @@ public class DatabaseClass {
 	private static Map<Long, Message> messages = new HashMap<>();
 	private static Map<Long, Profile> profiles = new HashMap<>();
 
+	static{
+		messages.put(1L, new Message(1, "Hello World", "madhu"));
+		messages.put(2L, new Message(2, "Hello Jersey", "madhu"));
+		messages.put(3L, new Message(3, "Hello restAPI", "madhu"));
+	}
 	public static Map<Long, Message> getMessages() {
+		
 		return messages;
 	}
 
