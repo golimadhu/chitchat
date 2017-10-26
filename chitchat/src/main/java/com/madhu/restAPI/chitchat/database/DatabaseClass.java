@@ -10,19 +10,22 @@ import com.madhu.restAPI.chitchat.model.Profile;
 
 public class DatabaseClass {
 	private static Map<Long, Message> messages = new HashMap<>();
-	private static Map<Long, Profile> profiles = new HashMap<>();
+	private static Map<String, Profile> profiles = new HashMap<>();
 
 	static{
 		messages.put(1L, new Message(1, "Hello World", "madhu"));
 		messages.put(2L, new Message(2, "Hello Jersey", "madhu"));
-		messages.put(3L, new Message(3, "Hello restAPI", "madhu"));
+		
+		profiles.put("madhu sudan", new Profile(1,"madhu sudan","madhu","sudan"));
+		profiles.put("madhu goli", new Profile(2,"madhu goli","madhu","goli"));
+		
 	}
 	public static Map<Long, Message> getMessages() {
 		
 		return messages;
 	}
 
-	public static Map<Long, Profile> getProfiles() {
+	public static Map<String, Profile> getProfiles() {
 		return profiles;
 	}
 }
